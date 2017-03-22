@@ -1,0 +1,10 @@
+
+* {margin: 0; padding: 0}
+
+.all { position: absolute; top: 0; left: 0; right: 0; bottom: 100px}
+
+.table1 {display: table; width: 100%; height: 100%; position: absolute}
+
+.tr1 {display: table-row}
+
+.tc1 { display: table-cell; width: 50%}
