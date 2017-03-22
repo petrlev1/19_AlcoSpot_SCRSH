@@ -25,7 +25,7 @@ a {
   position: relative;
   width: 100%;
   height: 84px;
-  max-width: 1162px;
+  max-width: 1170px;
   left: 0;
   right: 0;
   margin: auto; }
@@ -50,13 +50,18 @@ a {
 
 .genContent {
   position: relative;
-  padding: 86px 0 100px 0; }
+  padding: 90px 0 100px 0;
+  max-width: 1170px;
+  left: 0;
+  right: 0;
+  margin: auto; }
 
 .container {
   padding: 0; }
 
 .genLinesTable {
   display: table;
+  width: 100%;
   padding: 0;
   margin: 0; }
 
@@ -154,7 +159,7 @@ a {
   margin: auto;
   text-align: left;
   width: 100%;
-  max-width: 1162px; }
+  max-width: 1170px; }
 
 .botPanelTableRow {
   display: table-row; }
@@ -216,6 +221,13 @@ a {
   .sTable ul {
     display: table-row; }
   .sTable li {
+    display: table-cell; }
+
+.sTable2 {
+  display: table; }
+  .sTable2 .sTable2Row {
+    display: table-row; }
+  .sTable2 .sTable2Li {
     display: table-cell; }
 
 .Block2 {
@@ -310,6 +322,46 @@ h3 {
   background-color: #8CC63F;
   border-radius: 45px; }
 
+.inTable {
+  display: table;
+  font-size: 14px;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px #4294c5 solid;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
+  .inTable ul {
+    display: table-row;
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #edf0ff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 );
+    /* IE6-9 */ }
+  .inTable li {
+    display: table-cell;
+    padding: 10px;
+    border: 1px #d4d4d6 solid; }
+  .inTable .inTableHead {
+    color: #ffffff;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #0368A6 0%, #0368A6 100%); }
+    .inTable .inTableHead li {
+      border: 1px #4294c5 solid; }
+
+.inBoldLine {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 15px 0; }
+
+input, select {
+  color: #0368A6;
+  font-weight: 100; }
+
 .mainMenu {
   display: block;
   position: fixed;
@@ -335,7 +387,7 @@ h3 {
   left: 0;
   right: 0;
   margin: auto;
-  max-width: 1162px; }
+  max-width: 1170px; }
 
 .mainMenuHead {
   position: relative;

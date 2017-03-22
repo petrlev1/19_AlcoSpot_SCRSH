@@ -1,4 +1,4 @@
-$max-width1: 1162px;
+$max-width1: 1170px;
 
 
 * { margin: 0; padding: 0; font-family: Verdana, Geneva, sans-serif; }
@@ -19,12 +19,12 @@ a {text-decoration: none; border: none;
 
 .upButSize { width: 103px; height: 84px; }
 
-.genContent { position: relative; padding: 86px 0 100px 0; }
+.genContent { position: relative; padding: 90px 0 100px 0; max-width: $max-width1; left: 0; right: 0; margin: auto; }
 
 .container {padding: 0}
 
 
-.genLinesTable {display: table; padding: 0; margin: 0; }
+.genLinesTable {display: table; width: 100%; padding: 0; margin: 0; }
 .genLinesTableRow {display: table-row}
 .genLinesTableCell { display: table-cell; padding: 10px 5px; }
 
@@ -88,6 +88,11 @@ box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 3}
     li {display: table-cell}
 }
 
+.sTable2 { display: table;
+.sTable2Row {display: table-row}
+.sTable2Li {display: table-cell}
+}
+
 .Block2 { position: relative; top: 0; bottom: 0; height: 100%; margin: auto; border-radius: 10px; box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
 background: #ffffff; /* Old browsers */
 background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
@@ -122,6 +127,29 @@ h3 { color: #055280; font-size: 16px; font-weight: bold; padding: 0; margin: 0 0
 
 .status { position: relative; font-weight: bold; color: #ffffff}
 .statusCirc { position: absolute; display: inline-block; padding: 0; margin: 0 0 0 8px; width: 20px; height: 20px; background-color: #8CC63F; border-radius: 45px;}
+
+
+
+.inTable { display: table; font-size: 14px; width: 100%; border-collapse: collapse; border: 1px #4294c5 solid; box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    ul {display: table-row;
+    background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ffffff 0%,#edf0ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 ); /* IE6-9 */ }
+    li { display: table-cell; padding: 10px; border: 1px #d4d4d6 solid; }
+    
+    .inTableHead { color: #ffffff; font-weight: bold; background: linear-gradient(to bottom, #0368A6 0%,#0368A6 100%);
+    li { border: 1px #4294c5 solid; } 
+    }
+}
+
+.inBoldLine { color: #ffffff; font-size: 21px; font-weight: bold; padding: 15px 0; }
+
+input, select { color: #0368A6; font-weight: 100 }
+    
+
+
 
 
 
