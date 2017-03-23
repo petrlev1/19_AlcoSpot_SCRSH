@@ -22,6 +22,94 @@
 
 <body>
 
+<!-- Modal - prompt -->
+
+<div id="prompt" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+
+    <div class="modal-content">
+      <div class="modal-header" style="border-bottom: none;">
+
+        <h4 class="modal-title">Вы уверены?</h4>
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn-success btn-lg btnYes" style="float:left;">Да</a><button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Нет</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - prompt -->
+
+
+
+<!-- Modal - changeProduct -->
+
+<div id="changeProduct" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <h4 class="modal-title">Смена продукта</h4>
+
+      </div>
+      <div class="modal-body">
+
+        <!-- Modal content-->
+
+
+<div class="inList">
+<ul>
+<li>Водка «НОРД СТАНДАРТ» 0.5</li>
+</ul>
+<ul>
+<li>Водка особая «Онежская хлебная» 0.5</li>
+</ul>
+<ul>
+<li>Водка особая «Онежская хлебная» 0.5 «Онежская хлебная»</li>
+</ul>
+<ul>
+<li>Водка особая «Онежская хлебная» 0.5</li>
+</ul>
+<ul>
+<li>Водка «НОРД СТАНДАРТ» 0.5</li>
+</ul>
+<ul>
+<li>Водка особая «Онежская хлебная» 0.5</li>
+</ul>
+<ul>
+<li>Водка особая «Онежская хлебная» 0.5</li>
+</ul>
+<ul>
+<li>Водка особая «Онежская хлебная» 0.5 «Онежская хлебная»</li>
+</ul>
+<ul>
+<li>Водка особая «Онежская хлебная» 0.5</li>
+</ul>
+</div>
+
+        <!-- /Modal content-->
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn-success btn-lg btnYes" style="float:left;">ВЫБРАТЬ</a><button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Отменить</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - changeProduct -->
+
+
 <input name="" type="checkbox" value="" class="menuCheck" id="menuCheck">
 <div class="mainMenu">
 
@@ -75,31 +163,98 @@
 </div>
 </div>
 
+<div class="genContent">
+<br>
+<a href="" style="color:#ffffff; font-size:24px; text-decoration:underline" data-toggle="modal" data-target="#prompt">Модальное окно (Вопрос да/нет)</a>
+<br><br>
+<a href="" style="color:#ffffff; font-size:24px; text-decoration:underline" data-toggle="modal" data-target="#changeProduct">Модальное окно (смена продукта)</a>
+</div>
 
+<div class="genContent">
+
+<div class="modulBox">
+<div class="modulBoxHead">Смена продукта <div class="upButtons"><a href="#"><img src="css/img/but_close.svg" class="upButSize"></a></div></div>
+<div class="modulBoxCont">
+
+<div class="Block2">
+    <div class="Block2Cont">
+
+<div class="inList">
+<ul>
+<li>Водка «НОРД СТАНДАРТ» 0.5</li>
+</ul>
+<ul>
+<li>Водка особая «Онежская хлебная» 0.5</li>
+</ul>
+<ul>
+<li>Водка особая «Онежская хлебная» 0.5</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div style="text-align:center; margin: 20px 0 0 0;"><div class="button1">ВЫБРАТЬ</div></div>
+
+</div>
+</div>
+
+</div>
+
+<div class="genContent">
+
+<div class="Block2">
+    <div class="Block2Cont">
+    
+    <div class="list1">
+    
+    <ul>
+    <li><h1>Счетчики бутылок</h1></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    </ul>
+    
+    <ul>
+    <li><h1>Счетчики бутылок</h1></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    </ul>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    </div>
 
 
 <div class="genContent">
   
 <div class="inBoldLine">
 
-<div class="sTable2">
+<div class="sTable2 tStyle1">
 <div class="sTable2Row">
-<div class="sTable2Li">с</div><div class="sTable2Li" id="sandbox-container">
-  <input type="text" class="form-control" style="font-size: 21px;">
-</div><div class="sTable2Li">по</div><div class="sTable2Li">
-<input type="text" class="form-control" style="font-size: 21px;"></div><div class="sTable2Li">по</div><div class="sTable2Li">
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Линия 1
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Линия 2</a></li>
-    <li><a href="#">Линия 2</a></li>
-    <li><a href="#">Линия 2</a></li>
-  </ul>
-</div>
-</div>
+<div class="sTable2Li">с</div>
+<div class="sTable2Li">
+  <div class="form1 form1Calendar"><input type="text" value="08.02.17"><span></span></div>
+</div><div class="sTable2Li">по</div><div class="sTable2Li"><div class="form1 form1Calendar">
+    <input type="text" value="08.02.17">
+    <span></span></div></div>
+    
+    <div class="sTable2Li">
+    
+    <div class="sTable2" style="width: 100%;">
+    <div class="sTable2Row">
+    <div class="sTable2Li" style="width: 40%; text-align:right">Точка учета</div>
+    <div class="sTable2Li" style="width: 60%"><div class="form1 form1DropMenu"><input type="text" value="Линия 1"><span></span></div></div>
+    </div>
+    </div>
+    
+    </div>
+    
 </div>
 </div>
 
@@ -643,12 +798,7 @@
 
 </div>
 
-<script type="text/javascript">
-$('#sandbox-container input').datepicker({
-    language: "ru",
-    todayHighlight: true
-});
-</script>
+<script src="js/inblockfix.js"></script>
 
 </body>
 </html>

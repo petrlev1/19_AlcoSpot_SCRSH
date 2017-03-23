@@ -19,7 +19,7 @@ a {text-decoration: none; border: none;
 
 .upButSize { width: 103px; height: 84px; }
 
-.genContent { position: relative; padding: 90px 0 100px 0; max-width: $max-width1; left: 0; right: 0; margin: auto; }
+.genContent { position: relative; padding: 90px 10px 100px 10px; max-width: $max-width1; left: 0; right: 0; margin: auto; }
 
 .container {padding: 0}
 
@@ -63,6 +63,7 @@ box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 3}
 .botPanelTableCell {display: table-cell; vertical-align: middle; padding: 0; margin: 0 }
 
 .butMenu { display: inline-block; color: #ffffff; padding: 12px 20px; margin: 0; background-color: #0478BF; border: 5px #ffffff solid; cursor: pointer }
+
 .butMenuText { font-size: 30px; color: #ffffff; padding: 0 0 0 40px; background-image: url(img/butMenu.svg); background-repeat: no-repeat; background-position: left; background-size: 25%; }
 
 .botPanelTableIn { display: table; width: 100%; margin: 0;
@@ -73,6 +74,37 @@ box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 3}
 .bottomIcons { font-size: 12px; font-weight: bold; padding: 0 0 0 28px; margin: 10px 0; background-repeat: no-repeat; background-position: left; }
 .bottomIcons1 { @extend .bottomIcons;  background-image: url(img/bottomIcons1.svg);  }
 .bottomIcons2 { @extend .bottomIcons;  background-image: url(img/bottomIcons2.svg); }
+
+
+.modal-header {height: 84px; color: #333333; font-size: 24px; padding: 22px; }
+
+.modal-title { font-size: 24px}
+
+.close { font-size: 40px;}
+
+.btnYes { display: block; font-size: 24px; width: 200px; padding: 15px 20px; text-align: center}
+.btnNo { width: 200px; padding: 15px 20px; text-align: center}
+
+
+
+
+
+
+// login
+
+.logBack { position: absolute; background-image: url(img/logBack.png); background-size: cover; background-repeat: no-repeat; background-position: center; top: 0; bottom: 0; right: 0; left: 0; margin: auto; }
+
+.logCont { position: absolute; padding:0; height: 550px; top: 0; bottom: 0; right: 0; left: 0; margin: auto; width: 100%; max-width: 700px;}
+
+.logBlock {position: relative; width: 100%; left: 0; right: 0; margin: auto; border: 3px #ffffff solid; border-radius: 15px; }
+
+.logBlockCont { position: relative; left: 0; right: 0; margin: auto; width: 80%; padding: 20px; }
+
+.logText { color: #ffffff; font-size: 21px; }
+
+.logInp { 
+    input {font-size: 28px !important; }
+}
 
 
 
@@ -91,6 +123,10 @@ box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 3}
 .sTable2 { display: table;
 .sTable2Row {display: table-row}
 .sTable2Li {display: table-cell}
+}
+
+.tStyle1 { width: 100%;
+    .sTable2Li {padding: 5px; vertical-align: middle; text-align: center}
 }
 
 .Block2 { position: relative; top: 0; bottom: 0; height: 100%; margin: auto; border-radius: 10px; box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
@@ -144,9 +180,51 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     }
 }
 
-.inBoldLine { color: #ffffff; font-size: 21px; font-weight: bold; padding: 15px 0; }
+.inBoldLine { color: #ffffff; font-size: 19px; font-weight: bold; padding: 15px 0; }
 
-input, select { color: #0368A6; font-weight: 100 }
+.form1 { position: relative;
+    input { color: #0368A6; font-size: 21px; font-weight: 100; width: 100%; padding: 15px 15px; border-style: none; border-radius: 10px;
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ffffff 0%,#edf0ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 ); /* IE6-9 */
+    }
+    span { display: block; position: absolute; top: 0; bottom: 0; margin: auto; right: 5px; width: 40px; height: 40px; background-size: contain; background-repeat: no-repeat; pointer-events: none }
+}
+
+.form1Calendar { span { background-image: url(img/icCalendar.svg); }}
+.form1DropMenu { span { background-image: url(img/icDropmenu.svg); }}
+
+
+.list1 { font-size: 17px;
+    ul { border-bottom: 1px #d4d4d6 solid; padding: 0 0 14px 0; }
+    h1 { font-size: 17px; font-weight: bold; margin: 10px 0 14px 0;}
+    li {list-style: none; margin: 8px 0}
+    span { color: #2D8E34; margin: 0 0 0 10px; }
+}
+
+
+.modulBox { background-color: #0478BF; box-shadow: 0 0 3px rgba(0,0,0,0.9); }
+
+.modulBoxHead { position: relative; height: 84px; color: #ffffff; font-size: 24px; background-color: #0368A6; padding: 22px; border-bottom: 1px solid #4294c5; }
+
+.modulBoxCont { padding: 20px; }
+
+.inList { display: table; font-size: 21px; font-weight: bold; color: #0368A6; width: 100%; border-collapse: collapse;
+    ul {display: table-row;
+    background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ffffff 0%,#edf0ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 ); /* IE6-9 */ }
+    li { display: table-cell; padding: 15px; border: 1px #d4d4d6 solid; }
+}
+
+
+.button1 { display: inline-block; font-size: 32px; color: #ffffff; padding: 15px 30px; margin: 0; background-color: #0478BF; border: 5px #ffffff solid; cursor: pointer; box-shadow: 3px 3px 5px rgba(0,0,0,0.3); }
+
+
     
 
 

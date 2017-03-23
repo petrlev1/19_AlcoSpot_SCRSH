@@ -50,7 +50,7 @@ a {
 
 .genContent {
   position: relative;
-  padding: 90px 0 100px 0;
+  padding: 90px 10px 100px 10px;
   max-width: 1170px;
   left: 0;
   right: 0;
@@ -216,6 +216,78 @@ a {
 .bottomIcons2 {
   background-image: url(img/bottomIcons2.svg); }
 
+.modal-header {
+  height: 84px;
+  color: #333333;
+  font-size: 24px;
+  padding: 22px; }
+
+.modal-title {
+  font-size: 24px; }
+
+.close {
+  font-size: 40px; }
+
+.btnYes {
+  display: block;
+  font-size: 24px;
+  width: 200px;
+  padding: 15px 20px;
+  text-align: center; }
+
+.btnNo {
+  width: 200px;
+  padding: 15px 20px;
+  text-align: center; }
+
+.logBack {
+  position: absolute;
+  background-image: url(img/logBack.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto; }
+
+.logCont {
+  position: absolute;
+  padding: 0;
+  height: 550px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 700px; }
+
+.logBlock {
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 3px #ffffff solid;
+  border-radius: 15px; }
+
+.logBlockCont {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  padding: 20px; }
+
+.logText {
+  color: #ffffff;
+  font-size: 21px; }
+
+.logInp input {
+  font-size: 28px !important; }
+
 .sTable {
   display: table; }
   .sTable ul {
@@ -229,6 +301,13 @@ a {
     display: table-row; }
   .sTable2 .sTable2Li {
     display: table-cell; }
+
+.tStyle1 {
+  width: 100%; }
+  .tStyle1 .sTable2Li {
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center; }
 
 .Block2 {
   position: relative;
@@ -354,13 +433,115 @@ h3 {
 
 .inBoldLine {
   color: #ffffff;
-  font-size: 21px;
+  font-size: 19px;
   font-weight: bold;
   padding: 15px 0; }
 
-input, select {
+.form1 {
+  position: relative; }
+  .form1 input {
+    color: #0368A6;
+    font-size: 21px;
+    font-weight: 100;
+    width: 100%;
+    padding: 15px 15px;
+    border-style: none;
+    border-radius: 10px;
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #edf0ff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 );
+    /* IE6-9 */ }
+  .form1 span {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; }
+
+.form1Calendar span {
+  background-image: url(img/icCalendar.svg); }
+
+.form1DropMenu span {
+  background-image: url(img/icDropmenu.svg); }
+
+.list1 {
+  font-size: 17px; }
+  .list1 ul {
+    border-bottom: 1px #d4d4d6 solid;
+    padding: 0 0 14px 0; }
+  .list1 h1 {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 10px 0 14px 0; }
+  .list1 li {
+    list-style: none;
+    margin: 8px 0; }
+  .list1 span {
+    color: #2D8E34;
+    margin: 0 0 0 10px; }
+
+.modulBox {
+  background-color: #0478BF;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.9); }
+
+.modulBoxHead {
+  position: relative;
+  height: 84px;
+  color: #ffffff;
+  font-size: 24px;
+  background-color: #0368A6;
+  padding: 22px;
+  border-bottom: 1px solid #4294c5; }
+
+.modulBoxCont {
+  padding: 20px; }
+
+.inList {
+  display: table;
+  font-size: 21px;
+  font-weight: bold;
   color: #0368A6;
-  font-weight: 100; }
+  width: 100%;
+  border-collapse: collapse; }
+  .inList ul {
+    display: table-row;
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #edf0ff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 );
+    /* IE6-9 */ }
+  .inList li {
+    display: table-cell;
+    padding: 15px;
+    border: 1px #d4d4d6 solid; }
+
+.button1 {
+  display: inline-block;
+  font-size: 32px;
+  color: #ffffff;
+  padding: 15px 30px;
+  margin: 0;
+  background-color: #0478BF;
+  border: 5px #ffffff solid;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
 
 .mainMenu {
   display: block;
