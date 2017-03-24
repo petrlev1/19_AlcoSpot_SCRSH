@@ -1,10 +1,11 @@
 * {
   margin: 0;
-  padding: 0;
-  font-family: Verdana, Geneva, sans-serif; }
+  padding: 0; }
 
 body {
-  background-color: #0478BF; }
+  background-color: #0478BF;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #333333; }
 
 a {
   text-decoration: none;
@@ -393,6 +394,7 @@ h3 {
 
 .statusCirc {
   position: absolute;
+  top: 0;
   display: inline-block;
   padding: 0;
   margin: 0 0 0 8px;
@@ -476,6 +478,46 @@ h3 {
 .form1DropMenu span {
   background-image: url(img/icDropmenu.svg); }
 
+.dropdown {
+  position: relative; }
+  .dropdown button {
+    color: #0368A6;
+    font-size: 21px;
+    font-weight: 100;
+    text-align: left;
+    width: 100%;
+    min-width: 145px;
+    padding: 15px 15px;
+    border-style: none;
+    border-radius: 10px;
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #edf0ff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 );
+    /* IE6-9 */ }
+  .dropdown span {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; }
+
+.dropdown-menu li a {
+  display: block;
+  font-size: 21px;
+  padding: 10px 15px; }
+
 .list1 {
   font-size: 17px; }
   .list1 ul {
@@ -536,12 +578,42 @@ h3 {
   display: inline-block;
   font-size: 32px;
   color: #ffffff;
-  padding: 15px 30px;
+  padding: 10px 30px;
   margin: 0;
   background-color: #0478BF;
   border: 5px #ffffff solid;
   cursor: pointer;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
+
+.icons1 {
+  position: relative;
+  text-align: center;
+  display: block;
+  font-size: 35px;
+  color: #ffffff;
+  border: 1px #d4d4d6 solid;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 10px; }
+  .icons1:visited {
+    color: #ffffff; }
+  .icons1:hover {
+    color: #FFFFAB; }
+
+.icons1Text {
+  display: block;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+  color: #ffffff; }
+
+.whiteTextBlock {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 10px; }
+  .whiteTextBlock p {
+    display: block;
+    margin: 15px 0; }
 
 .mainMenu {
   display: block;
