@@ -19,7 +19,7 @@ a {text-decoration: none; border: none;
 
 .upButSize { width: 103px; height: 84px; }
 
-.genContent { position: relative; padding: 90px 10px 100px 10px; max-width: $max-width1; left: 0; right: 0; margin: auto; }
+.genContent { position: relative; padding: 90px 10px 100px 10px; max-width: $max-width1; left: 0; right: 0; margin: auto;}
 
 .container {padding: 0}
 
@@ -129,7 +129,7 @@ box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 3}
     .sTable2Li {padding: 5px; vertical-align: middle; text-align: center}
 }
 
-.Block2 { position: relative; top: 0; bottom: 0; height: 100%; margin: auto; border-radius: 10px; box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+.Block2 { position: relative; border-radius: 10px; box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
 background: #ffffff; /* Old browsers */
 background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
@@ -182,35 +182,40 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .inBoldLine { color: #ffffff; font-size: 19px; font-weight: bold; padding: 15px 0; }
 
-.form1 { position: relative;
-    input { color: #0368A6; font-size: 21px; font-weight: 100; width: 100%; padding: 15px 15px; border-style: none; border-radius: 10px;
+.formsAll {
+    position: relative; display: block; color: #0368A6; font-size: 21px; font-weight: 100; text-align: left; width: 100%; padding: 15px 15px; border-style: none; border-radius: 10px; text-decoration: none;
 background: #ffffff; /* Old browsers */
 background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, #ffffff 0%,#edf0ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 ); /* IE6-9 */
+    &:focus {text-decoration: none}
+    &:active {text-decoration: none}
+    &:visited {text-decoration: none}
+    
+}
+
+.form1 { position: relative;
+    input { @extend .formsAll;
     }
     span { display: block; position: absolute; top: 0; bottom: 0; margin: auto; right: 5px; width: 40px; height: 40px; background-size: contain; background-repeat: no-repeat; pointer-events: none }
 }
 
 .form1Calendar { span { background-image: url(img/icCalendar.svg); }}
-.form1DropMenu { span { background-image: url(img/icDropmenu.svg); }}
+
+.form1DropMenu { 
+    span { background-image: url(img/icDropmenu.svg); display: block; position: absolute; top: 0; bottom: 0; margin: auto; right: 5px; width: 40px; height: 40px; background-size: contain; background-repeat: no-repeat; pointer-events: none }
+}
 
 
 
 .dropdown { position: relative;
-    button { color: #0368A6; font-size: 21px; font-weight: 100; text-align: left; width: 100%; min-width: 145px; padding: 15px 15px; border-style: none; border-radius: 10px;
-background: #ffffff; /* Old browsers */
-background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #ffffff 0%,#edf0ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 ); /* IE6-9 */
-    }
+    button { @extend .formsAll }
     span { display: block; position: absolute; top: 0; bottom: 0; margin: auto; right: 5px; width: 40px; height: 40px; background-size: contain; background-repeat: no-repeat; pointer-events: none }
 }
 
-.dropdown-menu {
-    li { a {display: block; font-size: 21px; padding: 10px 15px;}}
+.dropdown-menu { width: 100%;
+    li { a {display: block; font-size: 21px; padding: 11px 15px;}}
 }
 
 
@@ -236,8 +241,17 @@ background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, #ffffff 0%,#edf0ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 ); /* IE6-9 */ }
-    li { display: table-cell; padding: 15px; border: 1px #d4d4d6 solid; }
+    li { display: table-cell; padding: 17px; border: 1px #d4d4d6 solid;
+        &:hover {background-color: #E3E8FF}}
 }
+
+.inListChek { display: none }
+.inListChek:checked ~ li { background-color: #0478BF; }
+
+.selectListChek:checked ~ li { background-color: #0478BF; }
+
+.selectList2Act { background-color: #0478BF; color: #fff;
+    &:hover {background-color: #0478BF !important; color: #fff;}}
 
 
 .button1 { display: inline-block; font-size: 32px; color: #ffffff; padding: 10px 30px; margin: 0; background-color: #0478BF; border: 5px #ffffff solid; cursor: pointer; box-shadow: 3px 3px 5px rgba(0,0,0,0.3); }
@@ -251,6 +265,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .whiteTextBlock { color: #ffffff; font-size: 18px; margin: 0 10px;
     p { display: block; margin: 15px 0;}}
+
+
+
+
+.productsBlock { position: fixed; margin: auto; overflow: auto;
+}
+
+.productsBlockUp { @extend .productsBlock; top: 84px; bottom: 50%; right: 0; left: 0; }
+
+.productsBlockDown { @extend .productsBlock; top: 50%; bottom: 77px; right: 0; left: 0; }
+
+.productsBlockCont { position: relative; max-width: $max-width1; left: 0; right: 0; margin: auto; padding: 0;
+}
 
 
     

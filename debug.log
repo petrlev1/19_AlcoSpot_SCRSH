@@ -9,3 +9,4 @@
 [0323/154854.004:ERROR:process_reader_win.cc(142)] SuspendThread: Отказано в доступе. (0x5)
 [0323/154854.004:ERROR:exception_snapshot_win.cc(87)] thread ID 4236 not found in process
 [0323/154854.004:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
+[0325/084704.691:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Идет закрытие канала. (0xE8)
