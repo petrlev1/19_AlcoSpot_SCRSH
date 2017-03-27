@@ -6,17 +6,14 @@
 <title></title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
+
+<link href="css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
 
   <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.ru.min.js"></script>
-
-
-
-
 
 </head>
 
@@ -287,16 +284,17 @@
 
 
 <div class="genContent" style="position:relative">
-  
+
 <div class="inBoldLine">
 
 <div class="sTable2 tStyle1">
 <div class="sTable2Row">
 <div class="sTable2Li">с</div>
 <div class="sTable2Li">
-  <div class="form1 form1Calendar"><input type="text" value="08.02.17"><span></span></div>
+  <div class="form1 form1Calendar">
+  <div id="sandbox-container"><input type="text" class="form-control"><span></span></div></div>
 </div><div class="sTable2Li">по</div><div class="sTable2Li"><div class="form1 form1Calendar">
-    <input type="text" value="08.02.17">
+    <div id="sandbox-container"><input type="text" class="form-control"><span></span></div>
     <span></span></div></div>
     
     <div class="sTable2Li" style="width: 35%;">
@@ -380,11 +378,13 @@
 <div class="sTable2Row">
 <div class="sTable2Li">с</div>
 <div class="sTable2Li">
-  <div class="form1 form1Calendar"><input type="text" value="08.02.17"><span></span></div>
+  <div class="form1 form1Calendar">
+  <div id="sandbox-container"><input type="text" class="form-control"><span></span></div>
+  </div>
 </div><div class="sTable2Li">по</div><div class="sTable2Li">
   <div class="form1 form1Calendar">
-    <input type="text" value="08.02.17">
-    <span></span></div></div>
+  <div id="sandbox-container"><input type="text" class="form-control"><span></span></div>
+  </div></div>
     
     <div class="sTable2Li">
     
@@ -440,10 +440,10 @@
 <div class="sTable2Row">
 <div class="sTable2Li">Дата с</div>
 <div class="sTable2Li">
-  <div class="form1 form1Calendar"><input type="text" value="08.02.17"><span></span></div>
+  <div class="form1 form1Calendar"><div id="sandbox-container"><input type="text" class="form-control"><span></span></div></div>
 </div><div class="sTable2Li">Дата по</div><div class="sTable2Li"><div class="form1 form1Calendar">
-    <input type="text" value="08.02.17">
-    <span></span></div></div>
+<div id="sandbox-container"><input type="text" class="form-control"><span></span></div>
+</div></div>
     
     <div class="sTable2Li">
     
@@ -559,7 +559,7 @@
                 </ul>
               </div>
             </div>
-    </div>
+  </div>
 
 <br>
 
@@ -598,82 +598,50 @@
 </ul>
 </div>
     </div>
-    </div>
+  </div>
     
     <br>
-
   <div class="Block2">
-    <div class="Block2Cont">
-      <h3>Итоговое значение</h3>
-      
-      <div class="block2Table">
-<ul>
-<li style="vertical-align: middle; ">
-
-<div style="margin: 0 0 10px 0">Итоговый объем р-ра (20°C): <strong>383209.11 дал</strong></div>
-<div style="margin: 0 0 10px 0">Итоговый объем р-ра (20°C): <strong>383209.11 дал</strong></div>
-<div style="margin: 0 0 10px 0">Итоговый объем р-ра (20°C): <strong>383209.11 дал</strong></div>
-
-</li>
-
-<li class="tableLine"></li>
-
-<li style="width: 65%">
-
-<span>
-
-
-<div class="block2Table">
-<ul>
-
-<li>
-
-<div class="block2Table">
-<ul>
-<li><img src="css/img/levels.svg" style="height: 128px; width:51px"></li>
-<li style="vertical-align: middle">
-<span><div style="color: #055280; font-weight:bold; font-size: 18px;">Текущий расход за сессию: <strong style="color:#000000">0.00 дал/ч</strong></div></span>
-</li>
-</ul>
-</div>
-
-</li>
-
-<li>
-
-<div class="block2Table">
-<ul>
-<li><img src="css/img/levels.svg" style="height: 128px; width:51px"></li>
-<li style="vertical-align: middle">
-<span><div style="color: #055280; font-weight:bold; font-size: 18px;">Текущий расход за сессию: <strong style="color:#000000">0.00 дал/ч</strong></div></span>
-</li>
-</ul>
-</div>
-
-</li>
-
-</ul>
-</div>
-
-</span>
-
-</li>
-
-</ul>
-
-</div>
-</div>
-</div>
-
-<div style="text-align:right; position:relative; height: 20px">
-<div class="sTable" style="padding: 10px 28px 10px 10px; width: 400px; text-align:right; position: absolute; right:0">
-<ul>
-<li><div class="status">Статус устройств <span class="statusCirc"></span></div></li>
-<li><div class="status">Статус точки <span class="statusCirc"></span></div></li>
-</ul>
-</div>
-</div>
-
+      <div class="Block2Cont">
+        <h3>Итоговое значение</h3>
+        <div class="block2Table">
+          <ul>
+            <li style="vertical-align: middle; ">
+              <div style="margin: 0 0 10px 0">Итоговый объем р-ра (20°C): <strong>383209.11 дал</strong></div>
+              <div style="margin: 0 0 10px 0">Итоговый объем р-ра (20°C): <strong>383209.11 дал</strong></div>
+              <div style="margin: 0 0 10px 0">Итоговый объем р-ра (20°C): <strong>383209.11 дал</strong></div>
+            </li>
+            <li class="tableLine"></li>
+            <li style="width: 65%"> <span>
+              <div class="block2Table">
+                <ul>
+                  <li>
+                    <div class="block2Table">
+                      <ul>
+                        <li><img src="css/img/levels.svg" style="height: 128px; width:51px"></li>
+                        <li style="vertical-align: middle"> <span>
+                          <div style="color: #055280; font-weight:bold; font-size: 18px;">Текущий расход за сессию: <strong style="color:#000000">0.00 дал/ч</strong></div>
+                        </span> </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="block2Table">
+                      <ul>
+                        <li><img src="css/img/levels.svg" style="height: 128px; width:51px"></li>
+                        <li style="vertical-align: middle"> <span>
+                          <div style="color: #055280; font-weight:bold; font-size: 18px;">Текущий расход за сессию: <strong style="color:#000000">0.00 дал/ч</strong></div>
+                        </span> </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </span> </li>
+          </ul>
+        </div>
+      </div>
+  </div>
 </div>
 
 
@@ -684,7 +652,20 @@
 
 <div class="botPanelTable">
 <div class="botPanelTableRow">
-<div class="botPanelTableCell" style="width: 1px;"><label for="menuCheck" class="butMenu"><div class="butMenuText">МЕНЮ</div></label></div>
+<div class="botPanelTableCell" style="width: 1px;"><label for="menuCheck" class="butMenu"><div class="butMenuText">МЕНЮ
+  <div style="text-align:right; position:relative; height: 20px">
+    <div class="sTable" style="padding: 10px 28px 10px 10px; width: 400px; text-align:right; position: absolute; right:0">
+      <ul>
+        <li>
+          <div class="status">Статус устройств <span class="statusCirc"></span></div>
+        </li>
+        <li>
+          <div class="status">Статус точки <span class="statusCirc"></span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div></label></div>
 
 
 
@@ -718,6 +699,13 @@
 </div>
 
 </div>
+
+<script type="text/javascript">
+$('#sandbox-container input').datepicker({
+    language: "ru",
+	todayHighlight: true
+});
+</script>
 
 <script src="js/inblockfix.js"></script>
 
