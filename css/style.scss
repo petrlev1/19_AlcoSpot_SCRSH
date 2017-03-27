@@ -13,7 +13,7 @@ a {text-decoration: none; border: none;
 
 .head1Cont { position: relative; width: 100%; height: 84px; max-width: $max-width1; left: 0; right: 0; margin: auto; }
 
-.head1Tit { position: absolute; top: 0; bottom: 0; margin: auto 15px; height: 40px; font-size: 25px; color: #ffffff; }
+.head1Tit { position: absolute; top: 0; bottom: 0; margin: auto 10px; height: 40px; font-size: 25px; color: #ffffff; }
 
 .upButtons { position: absolute; right: 0; top: 0; }
 
@@ -28,7 +28,7 @@ a {text-decoration: none; border: none;
 .genLinesTableRow {display: table-row}
 .genLinesTableCell { display: table-cell; padding: 10px 5px; }
 
-.genBlock { position: relative; top: 0; bottom: 0; height: 100%; margin: auto; border: 4px solid #8CC63F; border-radius: 10px;
+.genBlock { display: block; color: #333333; position: relative; top: 0; bottom: 0; height: 100%; margin: auto; border: 4px solid #8CC63F; border-radius: 10px;
 background: #ffffff; /* Old browsers */
 background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
@@ -64,7 +64,7 @@ box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 3}
 
 .butMenu { display: inline-block; color: #ffffff; padding: 12px 20px; margin: 0; background-color: #0478BF; border: 5px #ffffff solid; cursor: pointer }
 
-.butMenuText { font-size: 30px; color: #ffffff; padding: 0 0 0 40px; background-image: url(img/butMenu.svg); background-repeat: no-repeat; background-position: left; background-size: 25%; }
+.butMenuText { font-size: 30px; font-weight: 100; color: #ffffff; padding: 0 0 0 40px; background-image: url(img/butMenu.svg); background-repeat: no-repeat; background-position: left; background-size: 25%; }
 
 .botPanelTableIn { display: table; width: 100%; margin: 0;
     ul {display: table-row}
@@ -183,7 +183,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .inBoldLine { color: #ffffff; font-size: 19px; font-weight: bold; padding: 15px 0; }
 
 .formsAll {
-    position: relative; display: block; color: #0368A6; font-size: 21px; font-weight: 100; text-align: left; width: 100%; padding: 15px 15px; border-style: none; border-radius: 10px; text-decoration: none;
+    position: relative; display: block; color: #0368A6; font-size: 21px; font-weight: 100; text-align: left; width: 100%; height: 60px; padding: 15px 15px; border-style: none; border-radius: 10px; text-decoration: none; white-space: nowrap; overflow: hidden;
 background: #ffffff; /* Old browsers */
 background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
