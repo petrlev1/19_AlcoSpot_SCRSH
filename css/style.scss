@@ -13,13 +13,31 @@ a {text-decoration: none; border: none;
 
 .head1Cont { position: relative; width: 100%; height: 84px; max-width: $max-width1; left: 0; right: 0; margin: auto; }
 
-.head1Tit { position: absolute; top: 0; bottom: 0; margin: auto 10px; height: 40px; font-size: 25px; color: #ffffff; }
+.head1Tit { position: absolute; top: 0; bottom: 0; margin: auto 10px; height: 40px; font-size: 28px; color: #ffffff; white-space: nowrap }
 
 .upButtons { position: absolute; right: 0; top: 0; }
 
 .upButSize { width: 103px; height: 84px; }
 
-.genContent { position: relative; padding: 90px 10px 100px 10px; max-width: $max-width1; left: 0; right: 0; margin: auto;}
+.upButs { position: relative; display: inline-block; width: 103px; height: 84px; background-size: contain; background-repeat: no-repeat; }
+
+.UpLeftTable { position: absolute; left: 0;
+    li { vertical-align: middle}
+}
+
+.upButBack { position: relative; display: block; height: 84px; color: #ffffff; left: 0; margin: 0 18px 0 0; background-color: #0478BF; box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    p{ position: relative; display: block; font-size: 22px; padding: 26px 26px 26px 46px; left: 0; color: #9BDAFF;
+        }
+    span{position:absolute; font-size: 22px; left: 15px; color: #9BDAFF; margin: 31px 0 0 0;}
+}
+
+.upButInfo { @extend .upButs; background-color: #8CC63F; background-image: url(img/but_info.svg) }
+
+.upButClose { @extend .upButs; background-color: #DA2410; background-image: url(img/but_close.svg) }
+
+.genContent { position: relative; padding: 90px 10px 100px 10px; max-width: $max-width1; left: 0; right: 0; margin: auto; }
+
+h1 {color: #ffffff; font-size: 26px; margin: 8px 0 17px 0; }
 
 .container {padding: 0}
 
