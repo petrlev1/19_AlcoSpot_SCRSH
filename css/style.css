@@ -114,6 +114,10 @@ h1 {
 .container {
   padding: 0; }
 
+.linesBlock .col-sm-4 {
+  padding-right: 3px;
+  padding-left: 3px; }
+
 .genLinesTable {
   display: table;
   width: 100%;
@@ -129,14 +133,13 @@ h1 {
 
 .genBlock {
   display: block;
-  color: #333333;
   position: relative;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  margin: auto;
+  height: 270px;
+  color: #333333;
   border: 4px solid #8CC63F;
   border-radius: 10px;
+  overflow: hidden;
+  margin: 5px 0;
   background: #ffffff;
   /* Old browsers */
   background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%);
@@ -154,12 +157,15 @@ h1 {
   .genBlockCont h1 {
     font-size: 24px;
     font-weight: bold;
-    margin: 3px;
+    margin: 0;
     color: #333333; }
   .genBlockCont h2 {
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
     font-size: 14px;
     font-weight: bold;
-    margin: 15px; }
+    margin: 3px 0 5px 0; }
 
 .genBlockTable {
   display: table;
@@ -795,5 +801,9 @@ h3 {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 );
     /* IE6-9 */ }
+
+@media (max-width: 768px) {
+  .genBlock {
+    height: auto; } }
 
 /*# sourceMappingURL=style.css.map */
