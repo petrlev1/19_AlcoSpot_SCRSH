@@ -31,11 +31,11 @@ a {text-decoration: none; border: none;
     span{position:absolute; font-size: 22px; left: 15px; color: #9BDAFF; margin: 31px 0 0 0;}
 }
 
-.upButInfo { @extend .upButs; background-color: #8CC63F; background-image: url(img/but_info.svg) }
+.upButInfo { @extend .upButs; background-color: #5cb85c; background-image: url(img/but_info.svg) }
 
 .upButClose { @extend .upButs; background-color: #DA2410; background-image: url(img/but_close.svg) }
 
-.genContent { position: relative; padding: 90px 10px 100px 10px; max-width: $max-width1; left: 0; right: 0; margin: auto; }
+.genContent { position: relative; padding: 90px 10px 100px 10px; width: 100%; max-width: $max-width1; top: 0; left: 0; right: 0; bottom: 0; margin: auto; }
 
 h1 {color: #ffffff; font-size: 26px; margin: 8px 0 17px 0; }
 
@@ -55,7 +55,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 .genBlockCont { padding: 15px 3px 10px 3px; text-align: center;
-    h1 { font-size: 24px; font-weight: bold; margin: 3px; }
+    h1 { font-size: 24px; font-weight: bold; margin: 3px; color: #333333; }
     h2 { font-size: 14px; font-weight: bold; margin: 15px; }
 }
 
@@ -162,8 +162,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .block2Table { display: table; width: 100%;
     ul {display: table-row}
-    li {display: table-cell; text-align: left; vertical-align: middle}
+    li {display: table-cell; padding: 0; text-align: left; vertical-align: middle}
     span { display: block; padding: 0 8px;}
+}
+
+.block2TableSet1 {
+    li {padding: 5px 5px;}
 }
 
 .padding0 {
@@ -176,7 +180,7 @@ h3 { color: #055280; font-size: 16px; font-weight: bold; padding: 0; margin: 0 0
 
 .fontBlue { color: #055280; font-size: 16px; }
 
-.butBlue { display: block; margin: 0 5px; text-align: center; color: #ffffff; font-size: 14px; font-weight: bold; background-color: #0478BF; border-radius: 5px; padding: 5px 10px; box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+.butBlue { display: block; width: 100%; padding: 8px 10px; margin: 0 5px; text-align: center; color: #ffffff; font-size: 14px; font-weight: bold; background-color: #0478BF; border-radius: 5px; box-shadow: 2px 2px 3px rgba(0,0,0,0.3); border-style: none;
      &:hover {color: #FFFFAB; } }
 
 .status { position: relative; font-weight: bold; color: #ffffff}
@@ -184,18 +188,22 @@ h3 { color: #055280; font-size: 16px; font-weight: bold; padding: 0; margin: 0 0
 
 
 
-.inTable { display: table; font-size: 14px; width: 100%; border-collapse: collapse; border: 1px #4294c5 solid; box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+.inTable { display: table; font-size: 12px; width: 100%; box-shadow: 3px 3px 5px rgba(0,0,0,0.3); border-spacing: 0;
     ul {display: table-row;
     background: #ffffff; /* Old browsers */
 background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, #ffffff 0%,#edf0ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 ); /* IE6-9 */ }
-    li { display: table-cell; padding: 10px; border: 1px #d4d4d6 solid; }
+    li { display: table-cell; padding: 10px 5px; border-left: 1px #d4d4d6 solid; border-bottom: 1px #d4d4d6 solid; }
     
     .inTableHead { color: #ffffff; font-weight: bold; background: linear-gradient(to bottom, #0368A6 0%,#0368A6 100%);
-    li { border: 1px #4294c5 solid; } 
+    li { border-left: 1px #4294c5 solid; } 
     }
+}
+
+.inTableSet1 {
+    li { padding: 5px; }
 }
 
 .inBoldLine { color: #ffffff; font-size: 19px; font-weight: bold; padding: 15px 0; }
@@ -249,8 +257,11 @@ background: -moz-linear-gradient(top, #ffffff 0%, #edf0ff 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #ffffff 0%,#edf0ff 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, #ffffff 0%,#edf0ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edf0ff',GradientType=0 ); /* IE6-9 */ }
-    li { display: table-cell; padding: 17px; border: 1px #d4d4d6 solid;
-        &:hover {background-color: #E3E8FF}}
+    li { display: table-cell; padding: 0; border: 1px #d4d4d6 solid;
+        &:hover {background-color: #E3E8FF}
+        }
+    a { display: block; padding: 13px 15px; text-decoration: none}
+    a:focus { color: #ffffff; background-color: #0478BF; }
 }
 
 .inListChek { display: none }
@@ -277,15 +288,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 
 
-.productsBlock { position: fixed; margin: auto; overflow: auto;
-}
+.productsBlock { position: absolute; margin: auto; overflow: auto; }
 
-.productsBlockUp { @extend .productsBlock; top: 84px; bottom: 50%; right: 0; left: 0; }
+.productsBlockUp { @extend .productsBlock; top: 84px; bottom: 76px; right: 30%; left: 0; }
 
-.productsBlockDown { @extend .productsBlock; top: 50%; bottom: 77px; right: 0; left: 0; }
+.productsBlockDown { @extend .productsBlock; top: 84px; bottom: 76px; right: 0; left: 71%; }
 
 .productsBlockCont { position: relative; max-width: $max-width1; left: 0; right: 0; margin: auto; padding: 0;
 }
+
+.butUp { position:absolute; text-align:center; padding: 20px; top: 10px; right: 0; z-index: 2; }
 
 
     

@@ -2,15 +2,42 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title></title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
+
+<!-- Modal - prompt -->
+
+<div id="prompt" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+
+    <div class="modal-content">
+      <div class="modal-header" style="border-bottom: none;">
+
+        <h4 class="modal-title">Вы уверены?</h4>
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn-success btn-lg btnYes" style="float:left;">Да</a><button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Нет</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - prompt -->
+
 
 <div class="head1">
 <div class="head1Cont">
@@ -39,6 +66,7 @@
 <li><span>Точка учета: <strong>ЛИНИЯ1</strong></span></li><li class="tableLine"></li><li><span>Номер точки: <strong>1</strong></span></li><li class="tableLine"></li><li><span>Продукт: <strong>Водка особая Онежская хлебная 0.5</strong></span></li><li class="tableLine"></li><li><span>Код продукта: <strong>200/00110280000012345085</strong></span></li><li class="tableLine"></li><li><span>Крепость ТУ,%: <strong>40</strong></span></li>
 </ul>
 </div>
+<input type="button" value="Сменить продукт" class="butBlue" style="margin: 15px 0 0 0;" data-toggle="modal" data-target="#prompt">
 </div>
 </div>
 
@@ -59,13 +87,18 @@
                   </div>
                 </ul>
               </div>
-              <div class="block2Table" style="margin-top: 10px">
+              <div class="block2Table block2TableSet1" style="margin-top: 10px">
                 <ul>
-                  <li><a href="#" class="butBlue">001-Промывка</a></li>
-                  <li><a href="#" class="butBlue">001-Промывка</a></li>
-                  <li><a href="#" class="butBlue">001-Промывка</a></li>
-                  <li><a href="#" class="butBlue">001-Промывка</a></li>
-                  <li><a href="#" class="butBlue">001-Промывка</a></li>
+                  <li><input type="button" value="001-Промывка" class="butBlue" data-toggle="modal" data-target="#prompt"></li>
+                  <li><input type="button" value="002-Калибровка" class="butBlue" data-toggle="modal" data-target="#prompt"></li>
+                  <li><input type="button" value="003-Тех.прогон" class="butBlue" data-toggle="modal" data-target="#prompt"></li>
+                  <li><input type="button" value="004-Производство" class="butBlue" data-toggle="modal" data-target="#prompt"></li>
+                </ul>
+                <ul>
+                  <li><input type="button" value="005-Остановка" class="butBlue" data-toggle="modal" data-target="#prompt"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
                 </ul>
               </div>
             </div>
@@ -175,7 +208,7 @@
 </div>
 </div>
 
-<div style="text-align:right; position:relative; height: 20px">
+<div style="position:relative; height: 20px">
 <div class="sTable" style="padding: 10px 28px 10px 10px; width: 400px; text-align:right; position: absolute; right:0">
 <ul>
 <li><div class="status">Статус устройств <span class="statusCirc"></span></div></li>
@@ -273,6 +306,8 @@
 </div>
 
 </div>
+
+<script src="js/inblockfix.js"></script>
 
 </body>
 </html>

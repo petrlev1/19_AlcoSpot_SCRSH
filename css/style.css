@@ -88,7 +88,7 @@ a {
     margin: 31px 0 0 0; }
 
 .upButInfo {
-  background-color: #8CC63F;
+  background-color: #5cb85c;
   background-image: url(img/but_info.svg); }
 
 .upButClose {
@@ -98,9 +98,12 @@ a {
 .genContent {
   position: relative;
   padding: 90px 10px 100px 10px;
+  width: 100%;
   max-width: 1170px;
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   margin: auto; }
 
 h1 {
@@ -151,7 +154,8 @@ h1 {
   .genBlockCont h1 {
     font-size: 24px;
     font-weight: bold;
-    margin: 3px; }
+    margin: 3px;
+    color: #333333; }
   .genBlockCont h2 {
     font-size: 14px;
     font-weight: bold;
@@ -398,11 +402,15 @@ h1 {
     display: table-row; }
   .block2Table li {
     display: table-cell;
+    padding: 0;
     text-align: left;
     vertical-align: middle; }
   .block2Table span {
     display: block;
     padding: 0 8px; }
+
+.block2TableSet1 li {
+  padding: 5px 5px; }
 
 .padding0 span {
   display: block;
@@ -425,6 +433,8 @@ h3 {
 
 .butBlue {
   display: block;
+  width: 100%;
+  padding: 8px 10px;
   margin: 0 5px;
   text-align: center;
   color: #ffffff;
@@ -432,8 +442,8 @@ h3 {
   font-weight: bold;
   background-color: #0478BF;
   border-radius: 5px;
-  padding: 5px 10px;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); }
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-style: none; }
   .butBlue:hover {
     color: #FFFFAB; }
 
@@ -455,11 +465,10 @@ h3 {
 
 .inTable {
   display: table;
-  font-size: 14px;
+  font-size: 12px;
   width: 100%;
-  border-collapse: collapse;
-  border: 1px #4294c5 solid;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border-spacing: 0; }
   .inTable ul {
     display: table-row;
     background: #ffffff;
@@ -474,14 +483,18 @@ h3 {
     /* IE6-9 */ }
   .inTable li {
     display: table-cell;
-    padding: 10px;
-    border: 1px #d4d4d6 solid; }
+    padding: 10px 5px;
+    border-left: 1px #d4d4d6 solid;
+    border-bottom: 1px #d4d4d6 solid; }
   .inTable .inTableHead {
     color: #ffffff;
     font-weight: bold;
     background: linear-gradient(to bottom, #0368A6 0%, #0368A6 100%); }
     .inTable .inTableHead li {
-      border: 1px #4294c5 solid; }
+      border-left: 1px #4294c5 solid; }
+
+.inTableSet1 li {
+  padding: 5px; }
 
 .inBoldLine {
   color: #ffffff;
@@ -607,10 +620,17 @@ h3 {
     /* IE6-9 */ }
   .inList li {
     display: table-cell;
-    padding: 17px;
+    padding: 0;
     border: 1px #d4d4d6 solid; }
     .inList li:hover {
       background-color: #E3E8FF; }
+  .inList a {
+    display: block;
+    padding: 13px 15px;
+    text-decoration: none; }
+  .inList a:focus {
+    color: #ffffff;
+    background-color: #0478BF; }
 
 .inListChek {
   display: none; }
@@ -670,21 +690,21 @@ h3 {
     margin: 15px 0; }
 
 .productsBlock, .productsBlockUp, .productsBlockDown {
-  position: fixed;
+  position: absolute;
   margin: auto;
   overflow: auto; }
 
 .productsBlockUp {
   top: 84px;
-  bottom: 50%;
-  right: 0;
+  bottom: 76px;
+  right: 30%;
   left: 0; }
 
 .productsBlockDown {
-  top: 50%;
-  bottom: 77px;
+  top: 84px;
+  bottom: 76px;
   right: 0;
-  left: 0; }
+  left: 71%; }
 
 .productsBlockCont {
   position: relative;
@@ -693,6 +713,14 @@ h3 {
   right: 0;
   margin: auto;
   padding: 0; }
+
+.butUp {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  top: 10px;
+  right: 0;
+  z-index: 2; }
 
 .mainMenu {
   display: block;
