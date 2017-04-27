@@ -6,11 +6,140 @@
 <title></title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.ru.min.js"></script>
 
 </head>
 
 <body>
+
+<!-- Modal - prompt -->
+
+<div id="prompt" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+
+    <div class="modal-content">
+      <div class="modal-header" style="border-bottom: none;">
+
+        <h4 class="modal-title">Вы уверены?</h4>
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn-success btn-lg btnYes" style="float:left;">Да</a><button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Нет</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - prompt -->
+
+
+
+<!-- Modal - changeLines -->
+
+<div id="changeLines" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <h4 class="modal-title">Точка учета</h4>
+
+      </div>
+      <div class="modal-body">
+
+        <!-- Modal content-->
+
+
+<div class="inList">
+<ul>
+<li><a href="#">Линия 1</a></li>
+</ul>
+<ul>
+<li><a href="#">Линия 2</a></li>
+</ul>
+<ul>
+<li><a href="#">Линия 3</a></li>
+</ul>
+<ul>
+<li><a href="#">Линия 4</a></li>
+</ul>
+</div>
+
+        <!-- /Modal content-->
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn-success btn-lg btnYes" style="float:left;">ВЫБРАТЬ</a><button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Отменить</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - changeLines -->
+
+
+
+<!-- Modal - changeProduct -->
+
+<div id="changeProduct" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <h4 class="modal-title">Смена продукта</h4>
+
+      </div>
+      <div class="modal-body">
+
+        <!-- Modal content-->
+
+
+<div class="inList">
+<ul>
+<li><a href="#">Водка «НОРД СТАНДАРТ» 0.5</a></li>
+
+</ul>
+<ul>
+<li><a href="#">Водка особая «Онежская хлебная» 0.5</a></li>
+</ul>
+<ul>
+<li><a href="#">Водка особая «Онежская хлебная» 0.5</a></li>
+</ul>
+<ul>
+<li><a href="#">Водка особая «Онежская хлебная» 0.5</a></li>
+</ul>
+</div>
+
+        <!-- /Modal content-->
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn-success btn-lg btnYes" style="float:left;">ВЫБРАТЬ</a><button type="button" class="btn-lg btn-default btnNo" data-dismiss="modal">Отменить</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - changeProduct -->
+
 
 <input name="" type="checkbox" value="" class="menuCheck" id="menuCheck">
 <div class="mainMenu">
@@ -22,13 +151,13 @@
 <div class="mainMenuTable">
 <ul>
 <li>
-<a href="#">Отчеты по продукции</a>
-</li>
-<li>
 <a href="#">Устройства</a>
 </li>
 <li>
-<a href="#">Устройства</a>
+<a href="#">Отчеты за сессию</a>
+</li>
+<li>
+<a href="#">Почасовые отчеты</a>
 </li>
 </ul>
 <ul>
@@ -36,21 +165,21 @@
 <a href="#">Отчеты по продукции</a>
 </li>
 <li>
-<a href="#">Устройства</a>
+<a href="#">Продукция</a>
 </li>
 <li>
-<a href="#">Устройства</a>
+<a href="#">Суточные данные</a>
 </li>
 </ul>
 <ul>
 <li>
-<a href="#">Отчеты по продукции</a>
+<a href="#">ТТН данные</a>
 </li>
 <li>
-<a href="#">Устройства</a>
+<a href="#">Журнал событий</a>
 </li>
 <li>
-<a href="#">Устройства</a>
+<a href="#">О Программе</a>
 </li>
 </ul>
 </div>
@@ -59,314 +188,337 @@
 </div>
 
 <div class="head1">
-<div class="head1Cont">
-<div class="head1Tit">Точки учета</div>
-<div class="upButtons"><a href="#"><img src="css/img/but_info.svg" class="upButSize"></a><a href="#"><img src="css/img/but_close.svg" class="upButSize"></a></div>
+  <div class="head1Cont">
+      <div class="head1Tit">Точки учета</div>
+      <div class="upButtons"><a href="#" class="upButInfo"></a><a href="#" class="upButClose"></a></div>
+  </div>
 </div>
-</div>
-
-<div class="genContent">
-
-<div class="container">
-
-<div class="genLinesTable">
-<div class="genLinesTableRow">
-
-<div class="genLinesTableCell">
-
-<a href="#" class="genBlock">
-
-<div class="genBlockCont">
-<h1>ЛИНИЯ 1</h1>
-<h2>Водка особая «Онежская хлебная» 0.5</h2>
-
-<div class="genBlockTable">
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem1">
-<h1>10.00</h1>
-Объем за сессию, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem2">
-<h1>100.00</h1>
-Объем б/в за сессию, дал
-</div>
-</div>
-</div>
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem3">
-<h1>10.00</h1>
-Текущий расход, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem4">
-<h1>&nbsp;</h1>
-Режим: <strong>Остановка</strong>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-</a>
-
-</div>
-
-<div class="genLinesTableCell">
-
-<a href="#" class="genBlock">
-
-<div class="genBlockCont">
-<h1>ЛИНИЯ 1</h1>
-<h2>Водка особая «Онежская хлебная» 0.5</h2>
-
-<div class="genBlockTable">
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem1">
-<h1>10.00</h1>
-Объем за сессию, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem2">
-<h1>100.00</h1>
-Объем б/в за сессию, дал
-</div>
-</div>
-</div>
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem3">
-<h1>10.00</h1>
-Текущий расход, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem4">
-<h1>&nbsp;</h1>
-Режим: <strong>Остановка</strong>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-</a>
-
-</div>
-
-<div class="genLinesTableCell">
-
-<a href="#" class="genBlock">
-
-<div class="genBlockCont">
-<h1>ЛИНИЯ 1</h1>
-<h2>Водка особая «Онежская хлебная» 0.5</h2>
-
-<div class="genBlockTable">
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem1">
-<h1>10.00</h1>
-Объем за сессию, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem2">
-<h1>100.00</h1>
-Объем б/в за сессию, дал
-</div>
-</div>
-</div>
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem3">
-<h1>10.00</h1>
-Текущий расход, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem4">
-<h1>&nbsp;</h1>
-Режим: <strong>Остановка</strong>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-</a>
-
-</div>
+
+<div class="genContent" style="position:relative">
+
+<br>
+<a href="" style="color:#ffffff; font-size:24px; text-decoration:underline" data-toggle="modal" data-target="#prompt">Модальное окно (Вопрос да/нет)</a>
+<br><br>
+<a href="" style="color:#ffffff; font-size:24px; text-decoration:underline" data-toggle="modal" data-target="#changeProduct">Модальное окно (смена продукта)</a>
+</div>
+
+<div class="genContent" style="position:relative">
+
+<div class="modulBox">
+<div class="modulBoxCont">
+
+<div class="Block2">
+    <div class="Block2Cont">
+    
+    <div class="inList">
+                    <ul id="productList">
+                            <li id="product-li-1" onclick="AjaxChangeProduct.SelectProductInList(1); return false;" data-id="1">Test 0.00</li>
+                            <li id="product-li-2" onclick="AjaxChangeProduct.SelectProductInList(2); return false;" data-id="2">Спирт-сырец 0.00</li>
+                            <li id="product-li-3" onclick="AjaxChangeProduct.SelectProductInList(3); return false;" data-id="3">Спирт 1 сорт 0.00</li>
+                            <li id="product-li-4" onclick="AjaxChangeProduct.SelectProductInList(4); return false;" data-id="4">Спирт Базис 0.00</li>
+                            <li id="product-li-5" onclick="AjaxChangeProduct.SelectProductInList(5); return false;" data-id="5">Спирт Экстра 0.00</li>
+                            <li id="product-li-6" onclick="AjaxChangeProduct.SelectProductInList(6); return false;" data-id="6">Спирт люкс 0.00</li>
+                            <li id="product-li-7" onclick="AjaxChangeProduct.SelectProductInList(7); return false;" data-id="7">Спирт Альфа 0.00</li>
+                            <li id="product-li-8" onclick="AjaxChangeProduct.SelectProductInList(8); return false;" data-id="8">Спирт Высш. Очистки 0.00</li>
+                            <li id="product-li-9" onclick="AjaxChangeProduct.SelectProductInList(9); return false;" data-id="9" class="selectList2Act">Фракция головная ОСТ 0.00</li>
+                    </ul>
+                </div>
+                
+                <hr>
+
+<div class="inList">
+<ul>
+<li><a href="#">Водка «НОРД СТАНДАРТ» 0.5</a></li>
+
+</ul>
+<ul>
+<li><a href="#">Водка особая «Онежская хлебная» 0.5</a></li>
+</ul>
+<ul>
+<li><a href="#">Водка особая «Онежская хлебная» 0.5</a></li>
+</ul>
+<ul>
+<li><a href="#">Водка особая «Онежская хлебная» 0.5</a></li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div style="text-align:center; margin: 20px 0 0 0;"><div class="button1">ВЫБРАТЬ</div></div>
+
+</div>
+</div>
+
+</div>
+
+<div class="genContent" style="position:relative">
+
+<div class="Block2">
+    <div class="Block2Cont">
+    
+    <div class="list1">
+    
+    <ul>
+    <li><h1>Счетчики бутылок</h1></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    </ul>
+    
+    <ul>
+    <li><h1>Счетчики бутылок</h1></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    <li>ВиКо УСБ лин1<span>OK</span></li>
+    </ul>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    </div>
+
+
+<div class="genContent" style="position:relative">
+
+<div class="inBoldLine">
+
+<div class="sTable2 tStyle1">
+<div class="sTable2Row">
+<div class="sTable2Li">с</div>
+<div class="sTable2Li">
+  <div class="form1 form1Calendar">
+  <div id="sandbox-container"><input type="text" class="form-control"><span></span></div></div>
+</div><div class="sTable2Li">по</div><div class="sTable2Li"><div class="form1 form1Calendar">
+    <div id="sandbox-container"><input type="text" class="form-control"><span></span></div>
+    <span></span></div></div>
+    
+    <div class="sTable2Li" style="width: 35%;">
+    
+    <div class="sTable2" style="width: 100%;">
+    <div class="sTable2Row">
+    <div class="sTable2Li" style="width: 40%; text-align:right">Точка учета</div>
+    <div class="sTable2Li" style="width: 60%">
+    
+    <a href="" class="formsAll form1DropMenu" style="max-width: 300px; min-width: 143px;" data-toggle="modal" data-target="#changeLines">Линия 1<span></span></a>
+    
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    
+</div>
+</div>
+
+<div class="sTable" style="margin: 10px 0 5px 0; width:100%">
+<ul>
+<li><a href="#" class="glyphicon glyphicon-paste icons1"><span class="icons1Text">Отправить</span></a></li>
+<li><a href="#" class="glyphicon glyphicon-check icons1"><span class="icons1Text">Проверить</span></a></li>
+<li><a href="#" class="glyphicon glyphicon-refresh icons1"><span class="icons1Text">Обновить</span></a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="inTable">
+<ul class="inTableHead">
+<li>Точка №</li>
+<li>Время</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+</ul>
+<ul>
+<li>Линия 1</li>
+<li>08/02/2017 01:00:00</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+</ul>
+<ul>
+<li>Линия 1</li>
+<li>08/02/2017 01:00:00</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+</ul>
+<ul>
+<li>Линия 1</li>
+<li>08/02/2017 01:00:00</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+</ul>
+</div>
+
+</div>
+
+<div class="genContent" style="position:relative">
+  
+<div class="inBoldLine">
+
+<div class="sTable2 tStyle1">
+<div class="sTable2Row">
+<div class="sTable2Li">с</div>
+<div class="sTable2Li">
+  <div class="form1 form1Calendar">
+  <div id="sandbox-container"><input type="text" class="form-control"><span></span></div>
+  </div>
+</div><div class="sTable2Li">по</div><div class="sTable2Li">
+  <div class="form1 form1Calendar">
+  <div id="sandbox-container"><input type="text" class="form-control"><span></span></div>
+  </div></div>
+    
+    <div class="sTable2Li">
+    
+    </div>
+    
+</div>
+</div>
+
+<div class="sTable2" style="width: 100%;">
+    <div class="sTable2Row">
+    <div class="sTable2Li" style="width: 1px; padding: 10px; text-align: left">Продукт: </div>
+    <div class="sTable2Li" style="width: 99%; padding: 20px 20px 20px 0;">
+    
+    <a href="" class="formsAll form1DropMenu" data-toggle="modal" data-target="#changeProduct">Водка особая «Онежская хлебная» 0.5<span></span></a>
+    
+    </div>
+    
+    </div>
+    </div>
+
+</div>
+
+<div class="inTable">
+<ul class="inTableHead">
+<li>Точка №</li>
+<li>Время</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+<li>Объем за час</li>
+</ul>
+<ul>
+<li>Линия 1</li>
+<li>08/02/2017 01:00:00</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+</ul>
+</div>
+
+</div>
+
+<div class="genContent" style="position:relative">
+  
+<div class="inBoldLine">
+
+<div class="sTable2 tStyle1">
+<div class="sTable2Row">
+<div class="sTable2Li">Дата с</div>
+<div class="sTable2Li">
+  <div class="form1 form1Calendar"><div id="sandbox-container"><input type="text" class="form-control"><span></span></div></div>
+</div><div class="sTable2Li">Дата по</div><div class="sTable2Li"><div class="form1 form1Calendar">
+<div id="sandbox-container"><input type="text" class="form-control"><span></span></div>
+</div></div>
+    
+    <div class="sTable2Li">
+    
+    
+    </div>
+    
+</div>
+</div>
+
+</div>
+
+<div class="inTable">
+<ul class="inTableHead">
+<li>Точка №</li>
+<li>Реж.</li>
+<li>Начало сессии</li>
+<li>Конец сессии</li>
+<li>б/в объем за сессию, дал</li>
+<li>Объем за сессию при 20°C, дал</li>
+<li>Крепость</li>
+<li>Темп-ра</li>
+<li>Кол-во бут., шт.</li>
+<li>Емкость бут., л</li>
+<li>Достов-ть бут.%</li>
+<li>Разница, л</li>
+</ul>
+<ul>
+<li>Линия&nbsp;1</li>
+<li>1</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+</ul>
+<ul>
+<li>Линия&nbsp;1</li>
+<li>1</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+</ul>
+<ul>
+<li>Линия&nbsp;1</li>
+<li>1</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+<li>13.5</li>
+</ul>
 
 </div>
 
-<div class="genLinesTableRow">
-
-<div class="genLinesTableCell">
-
-<a href="#" class="genBlock">
-
-<div class="genBlockCont">
-<h1>ЛИНИЯ 1</h1>
-<h2>Водка особая «Онежская хлебная» 0.5</h2>
-
-<div class="genBlockTable">
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem1">
-<h1>10.00</h1>
-Объем за сессию, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem2">
-<h1>100.00</h1>
-Объем б/в за сессию, дал
-</div>
-</div>
-</div>
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem3">
-<h1>10.00</h1>
-Текущий расход, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem4">
-<h1>&nbsp;</h1>
-Режим: <strong>Остановка</strong>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-</a>
-
-</div>
-
-<div class="genLinesTableCell">
-
-<a href="#" class="genBlock">
-
-<div class="genBlockCont">
-<h1>ЛИНИЯ 1</h1>
-<h2>Водка особая «Онежская хлебная» 0.5</h2>
-
-<div class="genBlockTable">
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem1">
-<h1>10.00</h1>
-Объем за сессию, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem2">
-<h1>100.00</h1>
-Объем б/в за сессию, дал
-</div>
-</div>
-</div>
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem3">
-<h1>10.00</h1>
-Текущий расход, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem4">
-<h1>&nbsp;</h1>
-Режим: <strong>Остановка</strong>
 </div>
-</div>
-</div>
-
-</div>
-
-</div>
-</a>
-
-</div>
-
-<div class="genLinesTableCell">
-
-<a href="#" class="genBlock">
-
-<div class="genBlockCont">
-<h1>ЛИНИЯ 1</h1>
-<h2>Водка особая «Онежская хлебная» 0.5</h2>
-
-<div class="genBlockTable">
-
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem1">
-<h1>10.00</h1>
-Объем за сессию, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem2">
-<h1>100.00</h1>
-Объем б/в за сессию, дал
-</div>
-</div>
-</div>
 
-<div class="genBlockTableRow">
-<div class="genBlockTableCell">
-<div class="genBlockItem3">
-<h1>10.00</h1>
-Текущий расход, дал
-</div>
-</div>
-<div class="genBlockTableCell">
-<div class="genBlockItem4">
-<h1>&nbsp;</h1>
-Режим: <strong>Остановка</strong>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-</a>
 
-</div>
-
-</div>
-
-</div>
-
 
 
-</div>
-
-</div>
 
 <div class="bottomPanel">
 
@@ -404,6 +556,17 @@
 </div>
 
 </div>
+
+</div>
+
+<script type="text/javascript">
+$('#sandbox-container input').datepicker({
+    language: "ru",
+	todayHighlight: true
+});
+</script>
+
+<script src="js/inblockfix.js"></script>
 
 </body>
 </html>
