@@ -10,3 +10,12 @@
 [0323/154854.004:ERROR:exception_snapshot_win.cc(87)] thread ID 4236 not found in process
 [0323/154854.004:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
 [0325/084704.691:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Идет закрытие канала. (0xE8)
+[0427/202457.626:ERROR:process_reader_win.cc(142)] SuspendThread: Отказано в доступе. (0x5)
+[0427/202457.645:ERROR:exception_snapshot_win.cc(87)] thread ID 6304 not found in process
+[0427/202457.645:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
+[0428/001204.034:ERROR:process_info.cc(625)] range at 0xfffde000, size 0x230 fully unreadable
+[0428/001204.037:ERROR:process_info.cc(625)] range at 0xfffdd000, size 0xf84 fully unreadable
+[0428/001204.037:ERROR:process_info.cc(625)] range at 0xfffda000, size 0xf84 fully unreadable
+[0428/001204.037:ERROR:process_info.cc(625)] range at 0xfffd7000, size 0xf84 fully unreadable
+[0428/001204.037:ERROR:process_info.cc(625)] range at 0xfffac000, size 0xf84 fully unreadable
+[0428/001204.037:ERROR:process_info.cc(625)] range at 0xfffa9000, size 0xf84 fully unreadable
