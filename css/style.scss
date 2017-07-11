@@ -17,20 +17,22 @@ a {text-decoration: none; border: none;
 
 .upButtons { position: absolute; right: 0; top: 0; }
 
-.upButs { position: relative; display: inline-block; font-size: 16px; color: #fff; height: 54px; padding: 16px 18px; text-align: center; background-size: contain; background-repeat: no-repeat; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-shadow: 1px 1px 6px rgba(0, 0, 0, .2);
+.upButs { position: relative; display: inline-block; float: left; font-size: 16px; color: #fff; height: 54px; padding: 16px 18px; text-align: center; background-color: #0478BF; background-size: contain; background-repeat: no-repeat; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-shadow: 1px 1px 6px rgba(0, 0, 0, .2);
     &:hover { color: #FFFFAB; background-color: #0873b5; }}
 
-.upButBack1 { @extend .upButs; background-color: #0478BF; padding-left: 33px; border-left: 1px solid #4294c5; border-right: 1px solid #4294c5; border-top-left-radius: 10px; border-bottom-left-radius: 10px;
+.upButBack1 { @extend .upButs; padding-left: 33px; border-left: 1px solid #4294c5; border-right: 1px solid #4294c5; border-top-left-radius: 10px; border-bottom-left-radius: 10px;
     &:before { content: "\2b05"; position: absolute; left: 5px; font-size: 21px; margin: -5px 3px 0 3px }}
 
-.upButInfo { @extend .upButs; background-color: #0478BF; border-left: 1px solid #4294c5; border-right: 1px solid #4294c5; }
+.upButAdmin { @extend .upButs; border-left: 1px solid #4294c5; border-right: 1px solid #4294c5; padding-left: 33px; padding-right: 12px;
+    span { position: absolute; left: 10px; top: 20px; font-size: 16px; }}
 
-.upButClose { @extend .upButs; float: right; background-color: #0478BF; border-right: 1px solid #4294c5; border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+.upButInfo { @extend .upButs; border-left: 1px solid #4294c5; border-right: 1px solid #4294c5; margin: 0 10px;
+    span { font-size: 27px; padding: 0; margin: 0 0 0 0; line-height: 22px; } }
+
+.upButClose { @extend .upButs; float: right; border-right: 1px solid #4294c5; border-left: 1px solid #4294c5; border-top-right-radius: 10px; border-bottom-right-radius: 10px;
+    span { margin: 0 0 0 5px } }
 
 .upButSize { width: 103px; height: 54px; }
-
-.glyphicon-log-out { margin: 0 0 0 5px }
-.glyphicon-info-sign { font-size: 27px; padding: 0; margin: 0 0 0 0; line-height: 22px; }
 
 .UpLeftTable { position: absolute; left: 0;
     li { vertical-align: middle}
