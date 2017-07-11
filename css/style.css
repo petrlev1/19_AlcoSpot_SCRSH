@@ -4,6 +4,7 @@
 
 body {
   background-color: #0478BF;
+  font-size: 14px;
   font-family: Verdana, Geneva, sans-serif;
   color: #333333; }
 
@@ -215,17 +216,18 @@ h1 {
 
 .genBlockItem, .genBlockItem1, .genBlockItem2, .genBlockItem3, .genBlockItem4 {
   text-align: left;
-  font-size: 14px;
+  font-size: 12px;
   padding: 8px 8px;
   line-height: 15px; }
   .genBlockItem h1, .genBlockItem1 h1, .genBlockItem2 h1, .genBlockItem3 h1, .genBlockItem4 h1 {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     height: 28px;
-    padding: 3px 0 0 32px;
+    padding: 3px 0 0 25px;
     margin: 0 0 3px 0;
     background-repeat: no-repeat;
-    background-position: -2px; }
+    background-position: -2px;
+    background-size: 25px; }
 
 .genBlockItem1 h1 {
   background-image: url(img/genIcon1.svg); }

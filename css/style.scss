@@ -3,7 +3,7 @@ $max-width1: 1170px;
 
 * { margin: 0; padding: 0; }
 
-body { background-color: #0478BF; font-family: Verdana, Geneva, sans-serif; color: #333333; }
+body { background-color: #0478BF; font-size: 14px; font-family: Verdana, Geneva, sans-serif; color: #333333; }
 
 a {text-decoration: none; border: none;
     &:hover {text-decoration: none}
@@ -75,8 +75,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .genBlockTableRow {display: table-row}
 .genBlockTableCell {display: table-cell; width: 50%}
 
-.genBlockItem { text-align: left; font-size: 14px; padding: 8px 8px; line-height: 15px;
-    h1 { font-weight: bold; font-size: 16px; height: 28px; padding: 3px 0 0 32px; margin: 0 0 3px 0; background-repeat: no-repeat; background-position: -2px}
+.genBlockItem { text-align: left; font-size: 12px; padding: 8px 8px; line-height: 15px;
+    h1 { font-weight: bold; font-size: 14px; height: 28px; padding: 3px 0 0 25px; margin: 0 0 3px 0; background-repeat: no-repeat; background-position: -2px; background-size: 25px }
 }
 
 .genBlockItem1 { @extend .genBlockItem; h1 {background-image: url(img/genIcon1.svg); }}
